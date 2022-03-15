@@ -39,6 +39,8 @@
 - 자료구조 및 알고리즘의 개념
 - GCD(Greatest Common Divisor) 알고리즘의 세 방법
 - 재귀함수(Recursive Function)
+- 가상 컴퓨터, 가상 언어, 가상 코드
+- 시간복잡도 및 Big-O
 
 #### 알고리즘
 
