@@ -9,8 +9,7 @@
 
 if __name__ == "__main__":
     import unittest
-    from typing import Union
-    
+
     
     def gcd_sub(first_num: int, second_num: int) -> int:
         while (first_num != 0) and (second_num != 0):
@@ -123,7 +122,7 @@ if __name__ == "__main__":
     
     class TestPrefixSum(unittest.TestCase):
         def setUp(self) -> None:
-            self._test_case: dict[str, Union[int, list[int]]] = {
+            self._test_case: dict[str, int | list[int]] = {
                 "n": 4,
                 "X": [ 36, -436, -652, -487 ],
                 "result": [ 36, -400, -1052, -1539 ]
@@ -149,7 +148,7 @@ if __name__ == "__main__":
     class TestSum(unittest.TestCase):
         def setUp(self) -> None:
             self._test_case: dict[
-                str, Union[int, list[int]], list[list[int]]
+                str, int | list[int] | list[list[int]]
             ] = {
                 "n": 8,
                 "A": [41, 34, 44, 56, 89, 23, 60, 27],
