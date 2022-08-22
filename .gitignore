@@ -3,3 +3,8 @@
 
 # Python Cache
 __pycache__
+
+# CLion
+.idea
+cmake-build-debug
+CMakeLists.txt
