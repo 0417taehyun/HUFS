@@ -29,15 +29,17 @@ class Stack:
 
 
 if __name__ == "__main__":
-    stack = Stack(3)
+    size: int = 3
+    
+    stack = Stack(size)
 
-    for number in range(1, 4):
+    for number in range(1, size+1):
         stack.push(number)
         
     stack()
-    stack.push(4)
+    stack.push(size+1)
 
-    for _ in range(1, 4):
+    for _ in range(1, size+1):
         stack.pop()
 
     stack()
