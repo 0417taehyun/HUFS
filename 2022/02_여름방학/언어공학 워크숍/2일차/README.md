@@ -204,3 +204,36 @@ class Queue:
 높이 H에 대해 최소 개수의 노드, 다시 말해 H+1개의 노드를 가지면서 한쪽 방향의 자식 노드만을 가진 이진 트리다.
 
 이때 모든 노드가 왼쪽 자식 노드만을 가진 편향 이진 트리를 왼쪽 편향 이진 트리라 하며 반대로 오른쪽 자식 노드만을 가진 편향 이진 트리를 오른쪽 편향 이진 트리라 한다.
+
+### 실습
+
+#### 문제
+
+문자를 하나씩 입력 받아 리스트에 저장한 후, 스택 연산을 활용하여 입력 받은 문자의 역순 문자열을 생성하여 출력하는 프로그램을 작성하시오.
+
+#### 조건
+
+- 문자가 아닌 다른 값(숫자 등이)이 입력될 때까지 입력을 계속 받는다.
+- 최종 출력 결과에서 리스트는 empty 상태가 되어야 한다.
+
+#### 코드
+
+```Python
+import re
+
+
+stack: list[str] = []
+while re.match(
+    r"[a-zA-Z]",
+    (character := input("Input character: "))
+):
+    stack.append(character)
+
+answer: str = ""
+print(f"1 >>> {stack}")
+for _ in range(len(stack)):
+    answer += stack.pop()
+
+print(f"2 >>> {stack}")
+print(f"3 >>> {answer}")
+```
